@@ -7,38 +7,33 @@
   <style>
     body {
       margin: 0;
-      background: #f5f5f5;
+      padding: 0;
+      background-color: #ffffff; /* Optional: change if you want */
       font-family: Arial, sans-serif;
-      display: flex;
-      justify-content: center;
     }
 
-    .iframe-wrapper {
-      width: 100%;
-      max-width: 1000px;
-      margin: 0 auto;
-      padding: 0;
+    .iframe-container {
+      display: flex;
+      justify-content: center;
+      padding: 40px 10px;
+      box-sizing: border-box;
     }
 
     iframe {
       width: 100%;
+      max-width: 960px;
       height: 1800px;
       border: none;
-      display: block;
-    }
-
-    @media (max-width: 768px) {
-      iframe {
-        height: 2000px;
-      }
     }
   </style>
 </head>
 <body>
-  <div class="iframe-wrapper">
+  <div class="iframe-container">
     <iframe
       src="https://creatorapp.zohopublic.com/thinkenergy/battery-site-survey/page-embed/Battery_Survey_Page/GtyCVrOY59qzD8WG8t9xnp5XVsGPCf1j9hbEjJBKverZUekMCU6kZvCj00dXYhdYEaXFGyAdCHr29nrRnryu5A8RpOPY2kANWfAU"
-      title="Battery Site Survey Form">
+      title="Battery Site Survey Form"
+      allowTransparency="true"
+      scrolling="auto">
     </iframe>
   </div>
 </body>
