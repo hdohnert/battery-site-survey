@@ -4,182 +4,148 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Battery Site Survey | Think Energy</title>
-  <meta name="description" content="Submit your home photos for your Think Energy Battery Site Survey in a few easy steps." />
-
-  <style>
-    /* Base reset and font */
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body {
-      font-family: "Open Sans", Arial, sans-serif;
-      background-color: #f4f8fb;
-      color: #222;
-      line-height: 1.6;
-    }
-
-    /* Header */
-    header {
-      background-color: #0a5ca0;
-      color: white;
-      text-align: center;
-      padding: 2rem 1rem 1.5rem;
-    }
-    header h1 { font-size: 2rem; font-weight: 700; margin-bottom: 0.3rem; }
-    header p { font-size: 1.05rem; opacity: 0.9; }
-
-    /* Navigation */
-    nav {
-      display: flex;
-      justify-content: center;
-      gap: 1rem;
-      background-color: #ffffff;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-      padding: 0.75rem 1rem;
-      position: sticky;
-      top: 0;
-      z-index: 100;
-    }
-    nav button {
-      background: none;
-      border: none;
-      font-size: 1rem;
-      padding: 0.5rem 1rem;
-      cursor: pointer;
-      color: #0a5ca0;
-      border-radius: 6px;
-      transition: background 0.2s;
-    }
-    nav button.active {
-      background-color: #0a5ca0;
-      color: white;
-    }
-    nav button:hover {
-      background-color: #0a5ca0;
-      color: white;
-    }
-
-    /* Main content wrapper */
-    .content {
-      max-width: 850px;
-      margin: 2rem auto;
-      background: white;
-      border-radius: 12px;
-      box-shadow: 0 6px 16px rgba(0,0,0,0.08);
-      padding: 2rem;
-    }
-
-    section {
-      display: none;
-      animation: fadeIn 0.5s ease;
-    }
-    section.active {
-      display: block;
-    }
-
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(10px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-
-    /* Footer */
-    footer {
-      text-align: center;
-      font-size: 0.95rem;
-      color: #666;
-      margin: 2rem 0 3rem;
-    }
-    footer a {
-      color: #0a5ca0;
-      text-decoration: none;
-      font-weight: 600;
-    }
-    footer a:hover {
-      text-decoration: underline;
-    }
-
-    iframe {
-      width: 100%;
-      height: 1700px;
-      border: none;
-      border-radius: 10px;
-      background: #f9fafc;
-    }
-
-    @media (max-width: 600px) {
-      header h1 { font-size: 1.6rem; }
-      nav { flex-wrap: wrap; gap: 0.5rem; }
-    }
-  </style>
+  <link rel="stylesheet" href="style.css" />
 </head>
-
 <body>
   <header>
     <h1>Battery Site Survey</h1>
     <p>Help us get your battery installed faster ⚡</p>
   </header>
 
-  <nav>
-    <button class="active" data-step="1">Step 1</button>
-    <button data-step="2">Step 2</button>
-    <button data-step="3">Step 3</button>
-  </nav>
-
-  <main class="content">
-    <!-- Step 1 -->
-    <section id="step-1" class="active">
-      <h2 style="color:#0a5ca0; text-align:center;">Step 1: Submit Your Photos</h2>
-      <p style="text-align:center; margin-bottom:1rem;">
-        Snap a few quick photos of your home — right from your phone. <br>
-        We’ll handle the rest from here 💪
-      </p>
-      <iframe
-        src="https://creatorapp.zohopublic.com/thinkenergy/test-battery-site-survey/form-embed/Site_Survey_Form/ZW6e1xhQfYqsSbkh3DDKfBpUqgdSzG2mzMDwgs7RUqqsRPXBC18rDE2ShSgE5CeKtETJJv2Z5JPMCE7PeYgUAnn82P4D7U1CF3R8"
-        allowTransparency="true"
-        scrolling="auto">
-      </iframe>
-    </section>
-
-    <!-- Step 2 -->
-    <section id="step-2">
-      <h2 style="color:#0a5ca0; text-align:center;">Step 2: Review Your Photos</h2>
-      <p style="text-align:center;">
-        Once you’ve uploaded your photos, our team will review them to ensure we have everything needed to plan your installation.<br><br>
-        You’ll receive a confirmation email once everything checks out ✅
-      </p>
-      <div style="text-align:center; margin-top:1.5rem;">
-        <img src="https://i.imgur.com/A80Yhz0.jpeg" alt="Think Energy" style="max-width:160px;">
+  <main>
+    <div class="wizard">
+      <!-- Step 1 -->
+      <div class="step active" id="step-1">
+        <h2>Step 1: Exterior Photos</h2>
+        <p>Please upload clear photos showing all sides of your home.</p>
+        <iframe
+          src="https://creatorapp.zohopublic.com/thinkenergy/test-battery-site-survey/form-embed/Site_Survey_Form/ZW6e1xhQfYqsSbkh3DDKfBpUqgdSzG2mzMDwgs7RUqqsRPXBC18rDE2ShSgE5CeKtETJJv2Z5JPMCE7PeYgUAnn82P4D7U1CF3R8"
+          allowTransparency="true"
+          scrolling="auto"
+          frameborder="0"
+        ></iframe>
+        <div class="nav-buttons">
+          <button class="next" data-next="2">Next ➡️</button>
+        </div>
       </div>
-    </section>
 
-    <!-- Step 3 -->
-    <section id="step-3">
-      <h2 style="color:#0a5ca0; text-align:center;">Step 3: Next Steps</h2>
-      <p style="text-align:center;">
-        Our installation team will contact you to schedule your battery installation. <br><br>
-        Thank you for helping us streamline your project — you’re one step closer to energy independence ⚡
-      </p>
-      <div style="text-align:center; margin-top:2rem;">
-        <a href="https://hdohnert.github.io/battery-site-survey-guide/" target="_blank" style="color:#0a5ca0; font-weight:600;">View Battery Site Survey Guide</a>
+      <!-- Step 2 -->
+      <div class="step" id="step-2">
+        <h2>Step 2: Utility Meter</h2>
+        <p>Upload a clear wide shot of your utility meter, including nearby obstructions.</p>
+        <iframe
+          src="https://creatorapp.zohopublic.com/thinkenergy/test-battery-site-survey/form-embed/Site_Survey_Form/ZW6e1xhQfYqsSbkh3DDKfBpUqgdSzG2mzMDwgs7RUqqsRPXBC18rDE2ShSgE5CeKtETJJv2Z5JPMCE7PeYgUAnn82P4D7U1CF3R8"
+          allowTransparency="true"
+          scrolling="auto"
+          frameborder="0"
+        ></iframe>
+        <div class="nav-buttons">
+          <button class="back" data-back="1">⬅️ Back</button>
+          <button class="next" data-next="3">Next ➡️</button>
+        </div>
       </div>
-    </section>
+
+      <!-- Step 3 -->
+      <div class="step" id="step-3">
+        <h2>Step 3: Main Electrical Panel</h2>
+        <p>Take multiple photos of your electrical panel, including open and closed shots.</p>
+        <iframe
+          src="https://creatorapp.zohopublic.com/thinkenergy/test-battery-site-survey/form-embed/Site_Survey_Form/ZW6e1xhQfYqsSbkh3DDKfBpUqgdSzG2mzMDwgs7RUqqsRPXBC18rDE2ShSgE5CeKtETJJv2Z5JPMCE7PeYgUAnn82P4D7U1CF3R8"
+          allowTransparency="true"
+          scrolling="auto"
+          frameborder="0"
+        ></iframe>
+        <div class="nav-buttons">
+          <button class="back" data-back="2">⬅️ Back</button>
+          <button class="next" data-next="4">Next ➡️</button>
+        </div>
+      </div>
+
+      <!-- Step 4 -->
+      <div class="step" id="step-4">
+        <h2>Step 4: Subpanel</h2>
+        <p>If applicable, upload subpanel photos just like the main panel.</p>
+        <iframe
+          src="https://creatorapp.zohopublic.com/thinkenergy/test-battery-site-survey/form-embed/Site_Survey_Form/ZW6e1xhQfYqsSbkh3DDKfBpUqgdSzG2mzMDwgs7RUqqsRPXBC18rDE2ShSgE5CeKtETJJv2Z5JPMCE7PeYgUAnn82P4D7U1CF3R8"
+          allowTransparency="true"
+          scrolling="auto"
+          frameborder="0"
+        ></iframe>
+        <div class="nav-buttons">
+          <button class="back" data-back="3">⬅️ Back</button>
+          <button class="next" data-next="5">Next ➡️</button>
+        </div>
+      </div>
+
+      <!-- Step 5 -->
+      <div class="step" id="step-5">
+        <h2>Step 5: Proposed Battery & Inverter Area</h2>
+        <p>Show us where you’d like the battery and inverter to be installed.</p>
+        <iframe
+          src="https://creatorapp.zohopublic.com/thinkenergy/test-battery-site-survey/form-embed/Site_Survey_Form/ZW6e1xhQfYqsSbkh3DDKfBpUqgdSzG2mzMDwgs7RUqqsRPXBC18rDE2ShSgE5CeKtETJJv2Z5JPMCE7PeYgUAnn82P4D7U1CF3R8"
+          allowTransparency="true"
+          scrolling="auto"
+          frameborder="0"
+        ></iframe>
+        <div class="nav-buttons">
+          <button class="back" data-back="4">⬅️ Back</button>
+          <button class="next" data-next="6">Next ➡️</button>
+        </div>
+      </div>
+
+      <!-- Step 6 -->
+      <div class="step" id="step-6">
+        <h2>Step 6: Utility Bill Upload</h2>
+        <p>Upload your most recent electric bill (PDF or photo) so we can verify your service.</p>
+        <iframe
+          src="https://creatorapp.zohopublic.com/thinkenergy/test-battery-site-survey/form-embed/Site_Survey_Form/ZW6e1xhQfYqsSbkh3DDKfBpUqgdSzG2mzMDwgs7RUqqsRPXBC18rDE2ShSgE5CeKtETJJv2Z5JPMCE7PeYgUAnn82P4D7U1CF3R8"
+          allowTransparency="true"
+          scrolling="auto"
+          frameborder="0"
+        ></iframe>
+        <div class="nav-buttons">
+          <button class="back" data-back="5">⬅️ Back</button>
+          <button class="next" data-next="7">Next ➡️</button>
+        </div>
+      </div>
+
+      <!-- Step 7 -->
+      <div class="step" id="step-7">
+        <h2>Step 7: Review & Submit</h2>
+        <p>Confirm everything looks good and click submit in the embedded form.</p>
+        <iframe
+          src="https://creatorapp.zohopublic.com/thinkenergy/test-battery-site-survey/form-embed/Site_Survey_Form/ZW6e1xhQfYqsSbkh3DDKfBpUqgdSzG2mzMDwgs7RUqqsRPXBC18rDE2ShSgE5CeKtETJJv2Z5JPMCE7PeYgUAnn82P4D7U1CF3R8"
+          allowTransparency="true"
+          scrolling="auto"
+          frameborder="0"
+        ></iframe>
+        <div class="nav-buttons">
+          <button class="back" data-back="6">⬅️ Back</button>
+        </div>
+      </div>
+    </div>
   </main>
 
   <footer>
-    © 2025 Think Energy · <a href="#">Privacy Policy</a>
+    📸 Need help knowing what to photograph?
+    <a href="https://hdohnert.github.io/battery-site-survey-guide/" target="_blank">View the Battery Site Survey Guide</a>
   </footer>
 
   <script>
-    const buttons = document.querySelectorAll("nav button");
-    const sections = document.querySelectorAll("main section");
-
-    buttons.forEach((btn) => {
+    document.querySelectorAll(".next").forEach((btn) => {
       btn.addEventListener("click", () => {
-        buttons.forEach(b => b.classList.remove("active"));
-        btn.classList.add("active");
+        const nextStep = btn.getAttribute("data-next");
+        document.querySelectorAll(".step").forEach((s) => s.classList.remove("active"));
+        document.querySelector(`#step-${nextStep}`).classList.add("active");
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      });
+    });
 
-        const step = btn.getAttribute("data-step");
-        sections.forEach(sec => sec.classList.remove("active"));
-        document.querySelector(`#step-${step}`).classList.add("active");
-
+    document.querySelectorAll(".back").forEach((btn) => {
+      btn.addEventListener("click", () => {
+        const prevStep = btn.getAttribute("data-back");
+        document.querySelectorAll(".step").forEach((s) => s.classList.remove("active"));
+        document.querySelector(`#step-${prevStep}`).classList.add("active");
         window.scrollTo({ top: 0, behavior: "smooth" });
       });
     });
