@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Battery Site Survey | Think Energy</title>
   <style>
-    /* -------- RESET -------- */
+    /* Basic Reset */
     * {
       box-sizing: border-box;
       margin: 0;
@@ -14,13 +14,12 @@
 
     body {
       font-family: "Open Sans", Arial, sans-serif;
-      background-color: #f7f9fc;
+      background-color: #f4f8fb;
       color: #222;
       line-height: 1.6;
-      padding: 0;
     }
 
-    /* -------- HEADER -------- */
+    /* Header */
     header {
       background-color: #0a5ca0;
       color: white;
@@ -28,14 +27,8 @@
       padding: 2.5rem 1rem 2rem 1rem;
     }
 
-    header img {
-      max-width: 160px;
-      height: auto;
-      margin-bottom: 1rem;
-    }
-
     header h1 {
-      font-size: 1.8rem;
+      font-size: 2rem;
       font-weight: 700;
       margin-bottom: 0.3rem;
     }
@@ -45,20 +38,20 @@
       opacity: 0.9;
     }
 
-    /* -------- CONTAINER -------- */
+    /* Form Container */
     .form-wrapper {
       background: #fff;
-      max-width: 760px;
+      max-width: 780px;
       margin: 2rem auto;
-      padding: 2.5rem;
+      padding: 2rem 2.5rem;
       border-radius: 12px;
-      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
     }
 
     .form-wrapper h2 {
       text-align: center;
       color: #0a5ca0;
-      font-size: 1.4rem;
+      font-size: 1.6rem;
       margin-bottom: 1rem;
     }
 
@@ -69,14 +62,16 @@
       color: #444;
     }
 
-    /* -------- RESPONSIVE IFRAME -------- */
+    /* Iframe */
     .form-embed {
       width: 100%;
-      min-height: 1200px;
+      height: 1400px;
       border: none;
+      border-radius: 8px;
+      overflow: hidden;
     }
 
-    /* -------- FOOTER -------- */
+    /* Footer */
     footer {
       text-align: center;
       font-size: 0.9rem;
@@ -94,7 +89,7 @@
       text-decoration: underline;
     }
 
-    /* -------- MOBILE -------- */
+    /* Mobile */
     @media (max-width: 600px) {
       .form-wrapper {
         margin: 1rem;
@@ -102,7 +97,7 @@
       }
 
       header h1 {
-        font-size: 1.4rem;
+        font-size: 1.5rem;
       }
     }
   </style>
@@ -111,12 +106,11 @@
 <body>
   <!-- HEADER -->
   <header>
-    <img src="https://i.imgur.com/A80Yhz0.jpeg" alt="Think Energy Logo" />
     <h1>Battery Site Survey</h1>
     <p>Help us get your battery installed faster ⚡</p>
   </header>
 
-  <!-- BODY CONTENT -->
+  <!-- BODY -->
   <div class="form-wrapper">
     <h2>Step 1: Submit Your Photos</h2>
     <p class="intro">
@@ -124,20 +118,18 @@
       We’ll handle the rest from here 💪
     </p>
 
-    <!-- 👇 Paste your Zoho Creator embed code here -->
-    <!-- Example placeholder below -->
+    <!-- EMBEDDED ZOHO CREATOR FORM -->
     <iframe
       class="form-embed"
-      src="<iframe height='500px' width='100%' frameborder='0' allowTransparency='true' scrolling='auto' src='https://creatorapp.zohopublic.com/thinkenergy/test-battery-site-survey/form-embed/Site_Survey_Form/ZW6e1xhQfYqsSbkh3DDKfBpUqgdSzG2mzMDwgs7RUqqsRPXBC18rDE2ShSgE5CeKtETJJv2Z5JPMCE7PeYgUAnn82P4D7U1CF3R8'></iframe>"
+      src="https://creatorapp.zohopublic.com/thinkenergy/test-battery-site-survey/form-perma/Site_Survey_Form/ZW6e1xhQfYqsSbkh3DDKfBpUqgdSzG2mzMDwgs7RUqqsRPXBC18rDE2ShSgE5CeKtETJJv2Z5JPMCE7PeYgUAnn82P4D7U1CF3R8"
       frameborder="0"
       allowfullscreen
     ></iframe>
-    <!-- 👆 Replace this iframe SRC with your actual published form URL -->
   </div>
 
   <!-- FOOTER -->
   <footer>
-    Need help knowing what to photograph?  
+    📸 Need help knowing what to photograph?&nbsp;
     <a href="https://hdohnert.github.io/battery-site-survey-guide/" target="_blank">
       View the Battery Site Survey Guide
     </a>
