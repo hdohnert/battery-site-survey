@@ -2,36 +2,145 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Think Energy Site Survey</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Battery Site Survey | Think Energy</title>
   <style>
-    body {
+    /* -------- RESET -------- */
+    * {
+      box-sizing: border-box;
       margin: 0;
-      font-family: Arial, sans-serif;
-      background-color: #ffffff;
+      padding: 0;
+    }
+
+    body {
+      font-family: "Open Sans", Arial, sans-serif;
+      background-color: #f7f9fc;
+      color: #222;
+      line-height: 1.6;
+      padding: 0;
+    }
+
+    /* -------- HEADER -------- */
+    header {
+      background-color: #0a5ca0;
+      color: white;
       text-align: center;
+      padding: 2.5rem 1rem 2rem 1rem;
     }
-    .logo {
-      padding: 20px 0 10px 0;
-    }
-    .logo img {
-      max-width: 180px;
+
+    header img {
+      max-width: 160px;
       height: auto;
+      margin-bottom: 1rem;
     }
-    iframe {
-      border: none;
+
+    header h1 {
+      font-size: 1.8rem;
+      font-weight: 700;
+      margin-bottom: 0.3rem;
+    }
+
+    header p {
+      font-size: 1.05rem;
+      opacity: 0.9;
+    }
+
+    /* -------- CONTAINER -------- */
+    .form-wrapper {
+      background: #fff;
+      max-width: 760px;
+      margin: 2rem auto;
+      padding: 2.5rem;
+      border-radius: 12px;
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+    }
+
+    .form-wrapper h2 {
+      text-align: center;
+      color: #0a5ca0;
+      font-size: 1.4rem;
+      margin-bottom: 1rem;
+    }
+
+    .form-wrapper p.intro {
+      text-align: center;
+      font-size: 1.1rem;
+      margin-bottom: 2rem;
+      color: #444;
+    }
+
+    /* -------- RESPONSIVE IFRAME -------- */
+    .form-embed {
       width: 100%;
-      height: 1400px;
+      min-height: 1200px;
+      border: none;
+    }
+
+    /* -------- FOOTER -------- */
+    footer {
+      text-align: center;
+      font-size: 0.9rem;
+      color: #666;
+      padding: 2rem 0 3rem;
+    }
+
+    footer a {
+      color: #0a5ca0;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    /* -------- MOBILE -------- */
+    @media (max-width: 600px) {
+      .form-wrapper {
+        margin: 1rem;
+        padding: 1.5rem;
+      }
+
+      header h1 {
+        font-size: 1.4rem;
+      }
     }
   </style>
 </head>
+
 <body>
-  <div class="logo">
-    <img src="https://i.imgur.com/A80Yhz0.jpeg" alt="Think Energy Logo">
+  <!-- HEADER -->
+  <header>
+    <img src="https://i.imgur.com/A80Yhz0.jpeg" alt="Think Energy Logo" />
+    <h1>Battery Site Survey</h1>
+    <p>Help us get your battery installed faster ⚡</p>
+  </header>
+
+  <!-- BODY CONTENT -->
+  <div class="form-wrapper">
+    <h2>Step 1: Submit Your Photos</h2>
+    <p class="intro">
+      Just snap a few quick photos of your home — right from your phone.<br />
+      We’ll handle the rest from here 💪
+    </p>
+
+    <!-- 👇 Paste your Zoho Creator embed code here -->
+    <!-- Example placeholder below -->
+    <iframe
+      class="form-embed"
+      src="<iframe height='500px' width='100%' frameborder='0' allowTransparency='true' scrolling='auto' src='https://creatorapp.zohopublic.com/thinkenergy/test-battery-site-survey/form-embed/Site_Survey_Form/ZW6e1xhQfYqsSbkh3DDKfBpUqgdSzG2mzMDwgs7RUqqsRPXBC18rDE2ShSgE5CeKtETJJv2Z5JPMCE7PeYgUAnn82P4D7U1CF3R8'></iframe>"
+      frameborder="0"
+      allowfullscreen
+    ></iframe>
+    <!-- 👆 Replace this iframe SRC with your actual published form URL -->
   </div>
-  <iframe 
-    src="https://creatorapp.zohopublic.com/thinkenergy/battery-site-survey/form-embed/Site_Survey_Form/CUuDUw80xprvH6jmVJ6bahTEUCPm3zHJZgeh1VuduSSUVq4eHDOC9GJrPwn4uKrVPeV081h3BgyFVKNen8TgXuNHN6Qqx4hbHOCf" 
-    allow="camera *; microphone *">
-  </iframe>
+
+  <!-- FOOTER -->
+  <footer>
+    Need help knowing what to photograph?  
+    <a href="https://hdohnert.github.io/battery-site-survey-guide/" target="_blank">
+      View the Battery Site Survey Guide
+    </a>
+  </footer>
 </body>
 </html>
